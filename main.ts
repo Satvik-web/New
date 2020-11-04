@@ -13,3 +13,16 @@ basic.forever(function () {
         basic.showArrow(ArrowNames.NorthWest)
     }
 })
+basic.forever(function () {
+    if (input.compassHeading() < 135) {
+        basic.showArrow(ArrowNames.East)
+    }
+    if (input.compassHeading() < 225) {
+        basic.showArrow(ArrowNames.South)
+    }
+    if (input.compassHeading() < 315) {
+        basic.showArrow(ArrowNames.West)
+    } else {
+        basic.showArrow(ArrowNames.North)
+    }
+})
